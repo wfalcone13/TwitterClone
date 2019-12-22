@@ -15,6 +15,8 @@
 
 class Like < ApplicationRecord
 
+  validates :tweet_id, :user_id, presence: true 
+
   belongs_to :tweet,
   primary_key: :id,
   foreign_key: :tweet_id,
